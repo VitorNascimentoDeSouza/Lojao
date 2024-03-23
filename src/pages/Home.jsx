@@ -1,4 +1,5 @@
 import { useState, useEffect, Fragment } from 'react';
+import { toast } from 'react-toastify';
 import axios from '../axios';
 import Produto from '../components/Produto';
 
@@ -12,7 +13,7 @@ export default function Home() {
                 const response = await axios.get('/products');
                 setProdutos(response.data.products);
             } catch (error) {
-                alert('Erro ao tentar recuperar os produtos');
+                toast.error('Erro ao tentar recuperar os produtos');
             }
         }
         getProdutos();

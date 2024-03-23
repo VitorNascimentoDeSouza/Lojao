@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import axios from '../axios';
 
 export default function Login() {
@@ -20,7 +21,7 @@ export default function Login() {
             localStorage.setItem('usuarioLogado', JSON.stringify(response.data));
             location.assign('/');
         } catch (error) {
-            alert('Login inválido!');
+            toast.error('Login inválido!');
         }
     }
 

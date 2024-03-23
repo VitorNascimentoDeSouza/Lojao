@@ -101,3 +101,18 @@ input[type='submit'] {
     border: solid 1px gray;
     border-radius: 15px;
 }
+
+.Toastify button {
+    width: 20px;
+}
+
+:root {
+    --toastify-color-info: lightblue;
+    --toastify-color-success: lightgreen;
+    --toastify-color-warning: yellow;
+    --toastify-color-error: darkred;
+    --toastify-color-light: red;
+    --toastify-text-color-light: white;
+    --toastify-color-dark: red;
+    --toastify-text-color-dark: white;
+}

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 import './style.css';
 
 export default function Produto({ produto }) {
@@ -18,7 +19,7 @@ export default function Produto({ produto }) {
             carrinho.push(item);
         }
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        alert('Adicionado!');
+        toast.success('Adicionado!');
     }
 
     return (

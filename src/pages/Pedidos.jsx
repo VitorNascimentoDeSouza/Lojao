@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from '../axios';
 import Pedido from '../components/Pedido';
+import { toast } from 'react-toastify';
 
 export default function Pedidos() {
 
@@ -13,7 +14,7 @@ export default function Pedidos() {
                 const response = await axios.get('/carts/user/' + usuarioLogado.id);
                 setPedidos(response.data.carts);
             } catch (error) {
-                alert('Erro ao tentar recuperar os pedidos');
+                toast('Erro ao tentar recuperar os pedidos');
             }
         }
         getPedidos();

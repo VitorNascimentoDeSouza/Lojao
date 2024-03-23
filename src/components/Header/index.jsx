@@ -15,11 +15,16 @@ export default function Header() {
             {
                 usuarioLogado ?
                     <>
-                        <Link to="/pedidos"><FaBox size={24} /> Pedidos</Link>
-                        <Link to="/perfil"><FaUserAlt size={24} /> Perfil</Link>
-                        <Link to="/logout"><FaSignInAlt size={24} /> Logout</Link>
+                        <Link to="/pedidos"><FaBox size={24} /> Pedidos </Link>
+                        <Link to="/usuarios"><FaBox size={24} /> Usuarios </Link>
+                        <Link to="/perfil"><FaUserAlt size={24} /> Perfil </Link>
+                        <Link to="/logout"><FaSignInAlt size={24} /> Logout </Link>
                     </> :
+                    <>
                     <Link to="/login"><FaSignInAlt size={24} /> Login</Link>
+                    <Link to="/cadastro"><FaUserAlt size={24} /> Cadastrar-se</Link> 
+                    </>
+                    
             }
         </nav>
     );

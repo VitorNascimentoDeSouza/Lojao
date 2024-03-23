@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from '../axios';
-import Categoria from '../components/Categoria';
+import { toast } from 'react-toastify';
+import axios from '../../axios';
+import Categoria from '../../components/Categoria';
 
 export default function Categorias() {
 
@@ -12,7 +13,7 @@ export default function Categorias() {
                 const response = await axios.get('/products/categories');
                 setCategorias(response.data);
             } catch (error) {
-                alert('Erro ao tentar recuperar as categorias');
+                toast.error('Erro ao tentar recuperar as categorias');
             }
         }
         getCategorias();
